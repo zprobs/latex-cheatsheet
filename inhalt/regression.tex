@@ -1,9 +1,24 @@
-\section{Mengenlehre}
-\subsection*{Teilmenge und Obermenge}
-Eine Menge $B$ heißt Teilmenge einer Menge $A$ genau dann,
-wenn jedes Element von $B$ auch ein Element von $A$ ist ($B\subseteq A\Leftrightarrow\forall x:x\in B\Rightarrow x\in A$).
-$A$ heißt dann Obermenge von $B$. Eine Menge $B$ heißt echte Teilmenge von $A$ ($B\subset A$), falls gilt $B\subseteq A\wedge B\neq A$
-\subsection*{Grundlegende Mengenoperationen}
+\section{Linear Regression}
+\subsection*{OLS}
+Estimator: $\hat{\mathbf{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}$\\
+$E(x_{ti}u_t) = 0 \implies \mathbf{X}^{\top}(\mathbf{y}-\mathbf{X}\mathbf{\beta}) = \mathbf{0}$\\
+SSR($\beta$): $= \sum_{t=1}^{n}(y_i - \mathbf{X_t}\mathbf{\beta})^2$\\
+$\mathbf{y}^{\top} \mathbf{y} = \hat{\beta}^{\top} \mathbf{X}^{\top}\mathbf{X}\hat{\beta} + (\mathbf{y} - \mathbf{X}\hat{\beta} )^{\top} (\mathbf{y} - \mathbf{X}\hat{\beta})$\\
+Projection: $\mathbf{P_X = X(X^{\top} X)^{-1} X^{\top}}$\\
+$\mathbf{M_X = I- P_X = I - X(X^{\top} X)^{-1} X^{\top}}$\\
+$\mathbf{P_x y = X((X^{\top}X)^{-1}X^{\top}y)}$; $\mathbf{P_X P_X = P_X}$\\
+$\mathbf{M_X y = \hat{u}}$; $\mathbf{M_X X = 0}$; $\mathbf{M_X M_X = M_X}$\\
+$\mathbf{P_X + M_X = I}$; $\mathbf{P_X M_X} = \mathbf{0}$; $\mathbf{P_X ^{\top} = P_X}$\\
+$\lVert \mathbf{y} \rVert ^2 = \lVert \mathbf{P_X y} \rVert ^2 + \lVert \mathbf{M_X y} \rVert ^2$; $\lVert \mathbf{P_X y \rVert \leq \lVert \mathbf{y} \rVert}$\\
+Centering: $\mathbf{M_{\iota}x = z = x} - \bar{x}\mathbf{\iota}$; $\mathbf{\iota^{\top} z} = 0$
+$\mathbf{P_1 \equiv P_{X_1}}$; $\mathbf{P_1 P_X = P_X P_1 = P_1}$\\
+FWL: $\beta_2$ from $\mathbf{y = X_1\beta_1 +X_2 \beta_2 + u}$ and $\mathbf{M_1 y = M_1 X_2 \beta_2} + \text{res}$  are the same. (+ res)
+Seasonal w const: $\mathbf{s}_i ^{\prime} = \mathbf{s}_i - \mathbf{s_4}$, $i=1,2,3$.
+Avg is const coeff.
+$\mathbf{M_{S}y}$ is deseasonalized.
+\subsection*{Bias}
+Bias: $E(\hat{\theta}) - \theta_0$
+
 Seien $M, N$ Mengen und sei $U$ die Grundmenge.\\
 Vereinigungsmenge:\\
 $M\cup N:=\{x\mid x\in M\vee x\in N\}$\\
@@ -13,7 +28,7 @@ Differenz:\\
 $M\setminus N:=\{x\mid x\in M\wedge x\notin N\}$\\
 Disjunkte Menge: $M\cap N=\emptyset$
 \subsection*{Potenzmenge}
-Sei $M$ eine Menge. Die Menge aller Teilmengen von $M$ heißt Potenzmenge von $M$ und
+Sei $M$ eine Menge. Die Menge aller Teilmengen von $M$ hißt Potenzmenge von $M$ und
 wird $\mathcal{P}(M)$ notiert: $\mathcal{P}(M):=\{X\mid X\subseteq M\}$\\
 \emph{Beispiel:}\\
 $\mathcal{P}(\{a,b\})=\{\emptyset,\{a\},\{b\},\{a,b\}\}$\\
@@ -83,7 +98,7 @@ Durchschnitt aller Mengen aus $\mathcal{F}$:\\
 $\bigcap\mathcal{F}=\{3,4\}$
 \subsection*{Kartesisches Produkt}
 Seien $A,B$ Mengen, dann ist das kartesische Produkt (Kreuzprodukt)
-von $A$ und $B$ definiert als: $A\times B:=\{(a,b)\mid a\in A\wedge b\in B\}$. 
+von $A$ und $B$ definiert als: $A\times B:=\{(a,b)\mid a\in A\wedge b\in B\}$.
 $A\times B$ ist die Menge aller geordneten Paare von $A$ und $B$.\\
 \emph{Hinweis:}\\
 $(a,b)=(c,d)\Leftrightarrow a=c\wedge b=d$\\

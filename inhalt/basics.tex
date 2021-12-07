@@ -1,0 +1,29 @@
+\section{Basics}
+\subsection*{Distributions}
+Normal: $\phi(x) = (2\pi)^{-1/2}\exp (- \frac{1}{2}x^2)$\\
+Normal CDF: $\mathbf{\Phi(x)} = \int_{-\infty}^{x} \phi(y) dy$\\
+\subsection*{Moments}
+Continuous: $m_k (X) \equiv \int_{-\infty}^{\infty} x^k f(x)dx$\\
+Central:\\
+$\mu_k \equiv E(X - E(X)^k) = \int_{-\infty}^{\infty} (x-\mu)^k f(x)dx$\\
+Discrete Central:\\
+$\mu_k \equiv E(X - E(X)^k) = \sum_{i=1}^{m} p(x)(x_i-\mu)^k$\\
+\subsection*{Multivariate}
+Joint Density Func: $f(x_1, x_2) = \frac{\partial^2 F(x_1, x_2)}{\partial x_1 \partial x_2}$\\
+Independence:\\
+$F(x_1, x_2) = F(x_1, \infty)F(\infty, x_2)$\\
+or $f(x_1, x_2) = f(x_1)f(x_2)$\\
+Marginal Density:\\
+$f(x_1) \equiv F_1 (x_1, \infty) = \int_{-\infty}^{\infty} f(x_1, x_2) dx_2$\\
+Conditional Density: $f(x_1 \vert x_2) = \frac{f(x_1, x_2)}{f(x_2)}$\\
+Law Iterate Expec: $E(E(X_1 \vert X_2)) = E(X_1)$\\
+Any Deterministic Func $h$:\\
+$E(X_1 h(X_2) \mid X_2) = h(X_2)E(X_1 \mid X_2)$\\
+\subsection*{Matrix Algebra}
+Dot Product: $\mathbf{a}^{\top}\mathbf{b} = \sum_{i=1}^{n}a_{i}b_i$\\
+Matrix Multiplication: $C_{ij} = \sum_{k=1}^{m} A_{ik}B_{ki}$\\
+Transpose: $(\mathbf{A}\mathbf{B})^{\top} = \mathbf{B}^{\top} \mathbf{A}^{\top}$\\
+$\lVert \mathbf{x} \rVert = (\mathbf{x}^{\top}\mathbf{y})^{1/2} = \left( \sum_{i=1}^{n} x_i ^2 \right)^{1/2}$\\
+$\langle \mathbf{x}, \mathbf{y} \rangle = \lVert \mathbf{x} \rVert \lVert \mathbf{y} \rVert \cos(\theta)$\\
+Cauchy-Schwartz: $\langle \mathbf{x}, \mathbf{y} \rangle \leq \lVert \mathbf{x} \rVert \lVert \mathbf{y} \rVert$\\
+Linear Indep: $\mathbf{X}^{\top}\mathbf{X}\mathbf{b} = \mathbf{0}$, $\mathbf{b} \neq \mathbf{0}$\\
