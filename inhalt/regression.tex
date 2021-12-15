@@ -16,119 +16,103 @@ FWL: $\beta_2$ from $\mathbf{y = X_1\beta_1 +X_2 \beta_2 + u}$ and $\mathbf{M_1 
 Seasonal w const: $\mathbf{s}_i ^{\prime} = \mathbf{s}_i - \mathbf{s_4}$, $i=1,2,3$.
 Avg is const coeff.
 $\mathbf{M_{S}y}$ is deseasonalized.
+$\beta^{(t)}-\hat{\beta} = -1 \backslash 1-h_t \mathbf{(X^{\top}X)^{-1}X_t ^{\top}}\hat{u_t}$ where $h_t$ denotes the t\textsuperscript{th} diagonal element of $\mathbf{P_X}$.
 \subsection*{Bias}
-Bias: $E(\hat{\theta}) - \theta_0$
-
-Seien $M, N$ Mengen und sei $U$ die Grundmenge.\\
-Vereinigungsmenge:\\
-$M\cup N:=\{x\mid x\in M\vee x\in N\}$\\
-Schnittmenge:\\
-$M\cap N:=\{x\mid x\in M\wedge x\in N\}$\\
-Differenz:\\
-$M\setminus N:=\{x\mid x\in M\wedge x\notin N\}$\\
-Disjunkte Menge: $M\cap N=\emptyset$
-\subsection*{Potenzmenge}
-Sei $M$ eine Menge. Die Menge aller Teilmengen von $M$ hißt Potenzmenge von $M$ und
-wird $\mathcal{P}(M)$ notiert: $\mathcal{P}(M):=\{X\mid X\subseteq M\}$\\
-\emph{Beispiel:}\\
-$\mathcal{P}(\{a,b\})=\{\emptyset,\{a\},\{b\},\{a,b\}\}$\\
-$\mathcal{P}(\emptyset)=\{\emptyset\}$\\
-$\mathcal{P}(\{\emptyset\})=\{\emptyset,\{\emptyset\}\}$\\
-$\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))=\{\emptyset,\{\emptyset\},\{\{\emptyset\}\},\{\emptyset,\{\emptyset\}\}\}$
-\subsection*{Hassediagramm}
-\begin{wrapfigure}[9]{r}{.46\linewidth}
-\vspace{-20pt}
-\hspace{-0pt}
-\begin{tikzpicture}[scale=0.4]
-  \node (max) at (0,4) {$\{x,y,z\}$};
-  \node (a) at (-2,2) {$\{x,y\}$};
-  \node (b) at (0,2) {$\{x,z\}$};
-  \node (c) at (2,2) {$\{y,z\}$};
-  \node (d) at (-2,0) {$\{x\}$};
-  \node (e) at (0,0) {$\{y\}$};
-  \node (f) at (2,0) {$\{z\}$};
-  \node (min) at (0,-2) {$\emptyset$};
-  \draw (min) -- (d) -- (a) -- (max) -- (b) -- (f)
-  (e) -- (min) -- (f) -- (c) -- (max)
-  (d) -- (b);
-  \draw[preaction={draw=white, -,line width=6pt}] (a) -- (e) -- (c);
-\end{tikzpicture}
-\end{wrapfigure}
-Man kann die Inklusionsbeziehungen aller Teilmengen in Form eines Hasse-Diagramms veranschaulichen. Das Hasse-Diagramm für $\mathcal{P}(\{x,y,z\})$ lässt sich dann wie folgt darstellen:
-\subsection*{Venn-Diagramm}
-\begin{tikzpicture}[scale=.45]
-    \begin{scope}
-        \clip \firstcircle;
-        \fill[filled] \secondcircle;
-    \end{scope}
-    \draw[outline] \firstcircle node {$A$};
-    \draw[outline] \secondcircle node {$B$};
-    \node[anchor=south] at (current bounding box.north) {$A \cap B$};
-\end{tikzpicture}
-%Set A or B but not (A and B) also known a A xor B
-\begin{tikzpicture}[scale=.45]
-\hspace{-.5cm}
-    \draw[filled, even odd rule] \firstcircle node {$A$}
-                                 \secondcircle node{$B$};
-    \node[anchor=south] at (current bounding box.north) {$\overline{A \cap B}$};
-\end{tikzpicture}
-% Set A or B
-\begin{tikzpicture}[scale=.45]
-    \draw[filled] \firstcircle node {$A$}
-                  \secondcircle node {$B$};
-    \node[anchor=south] at (current bounding box.north) {$A \cup B$};
-\end{tikzpicture}
-% Set A but not B
-\hspace{.5cm}
-\begin{tikzpicture}[scale=.45]
-    \begin{scope}
-        \clip \firstcircle;
-        \draw[filled, even odd rule] \firstcircle node {$A$}
-                                     \secondcircle;
-    \end{scope}
-    \draw[outline] \firstcircle
-                   \secondcircle node {$B$};
-    \node[anchor=south] at (current bounding box.north) {$A\setminus B$};
-\end{tikzpicture}
-\subsection*{Operationen auf Mengenfamilien}
-Sei $\mathcal{F}=\{\{1,2,3,4\},\{3,4,5,6\}\}$ Mengenfamilie.
-Vereinigung aller Mengen aus $\mathcal{F}$:\\
-$\bigcup\mathcal{F}=\{1,2,3,4,5,6\}$\\
-Durchschnitt aller Mengen aus $\mathcal{F}$:\\
-$\bigcap\mathcal{F}=\{3,4\}$
-\subsection*{Kartesisches Produkt}
-Seien $A,B$ Mengen, dann ist das kartesische Produkt (Kreuzprodukt)
-von $A$ und $B$ definiert als: $A\times B:=\{(a,b)\mid a\in A\wedge b\in B\}$.
-$A\times B$ ist die Menge aller geordneten Paare von $A$ und $B$.\\
-\emph{Hinweis:}\\
-$(a,b)=(c,d)\Leftrightarrow a=c\wedge b=d$\\
-$A\times\emptyset=\emptyset\times A=\emptyset$\\
-$A\times B\neq B\times A$\\
-\emph{Beispiel:}\\
-$\{1,2\}\times\{3,4\}=\{(1,3),(1,4),(2,3),(2,4)\}$\\
-$\{3,4\}\times\{1,2\}=\{(3,1),(3,2),(4,1),(4,2)\}$
-\subsection*{Rechenregeln für Mengenoperationen}
-Assoziativgesetze:\\
-$(A\cup B)\cup C=A\cup (B\cup C)$\\
-$(A\cap B)\cap C=A\cap (B\cap C)$\\
-Kommutativgesetze:\\
-$A\cup B=B\cup A$\\
-$A\cap B=B\cap A$\\
-Distributivgesetze:\\
-$(A\cup B)\cap C=(A\cap C)\cup (B\cap C)$\\
-$(A\cap B)\cup C=(A\cup C)\cap (B\cup C)$\\
-de Morganschen Gesetze (Differenz):\\
-$A\setminus (B\cup C)=(A\setminus B)\cap (A\setminus C)$\\
-$A\setminus (B\cap C)=(A\setminus B)\cup (A\setminus C)$\\
-de Morganschen Gesetze (Komplement):\\
-$\bar{A\cup B}=\bar{A}\cap\bar{B}$\\
-$\bar{A\cap B}=\bar{A}\cup\bar{B}$\\
-Absorptionsgesetze:\\
-$A\cap (A\cup B)=A$\\
-$A\cup (A\cap B)=A$\\
-Idempotenzgesetze:\\
-$A\cap A=A$\\
-$A\cup A=A$\\
-Komplementgesetze ($G$ ist Grundmenge):\\
-$A\cap\bar{A}=\emptyset$\\
-$A\cup\bar{A}=G$
+vector of (true) model params: $\theta$\\
+Bias: $E(\hat{\theta}) - \theta_0$, $E(\mathbf{(X^{\top}X)^{-1}X^{\top}u}) = 0$\\
+estimating eq: $g(\mathbf{y},\mathbf{\theta}) = 0$ unbiased iff $\forall \mu \in \mathbb{M}, E_{\mu}g(\mathbf{y,\theta_\mu}) = \mathbf{0}$ or $E(\mathbf{X^{\top}u) = 0}$\\
+$X$ exogenous $\implies$ $E(\mathbf{u \mid X) = 0}$ and both  $\hat{\beta}$ and estimating equations unbiased.\\
+Make exog assumpt in cross-sec not time.\\
+regressors predetermined: $E(\mathbf{X^{\top}u}) = \mathbf{0}$
+\subsection*{Stochastic Limits}
+Converg in prob: $\lim Pr(\lvert Y_n - Y_{\infty} \rvert > \epsilon) = 0 \Rightarrow \text{p}\lim Y_n = Y_{\infty} \implies$ converg dist\\
+Converg dist: $\lim F_n (x) = F(x) \equiv Y_n \rightarrow F$\\
+LLN: $\text{plim} \bar{Y_n} = \text{plim} \frac{1}{n} \sum^{n}_{t} Y_t = \mu_{Y}$, $Y_t$ IID, $\bar{Y_n}$ sample mean of $Y_t$, $\mu_T$ pop mean.
+LLN2: $\text{plim} \frac{1}{n} \sum_{t}^{n} Y_t = \lim \frac{1}{n} \sum_{t}^{n} E(Y_t)$\\
+$\text{plim} Y_n Z_n = \text{plim} Y_n \text{plim} Z_n$ if converg\\
+$\mathbf{X^{\top}X}$ may not have plim so mult by $1 \backslash n$.\\
+consistent: $\text{plim}_{\mu} \hat{\beta} = \beta_\mu$, may be bias\\
+$E(\mu_t \mid \mathbf{X}_t) = 0 \implies \hat{\beta}$ consistent.
+\subsection*{Covariance and Precision Matrices}
+$\text{Cov}(b_i, b_j) \equiv E((b_i - E(b_i))(b_j-E(b_j)))$\\
+if $i=j$, $\text{Cov}(b_i, b_j) = \text{Var}(b_i)$\\
+$\text{Var}(\mathbf{b}) \equiv E((\mathbf{b}-E(\mathbf{b}))(\mathbf{b}-E(\mathbf{b}))^{\top})$\\
+when $E(\mathbf{b}) = \mathbf{0}$, $\text{Var}(\mathbf{b}) = E(\mathbf{bb^{\top}})$
+$b_i$, $b_j$ indep: $\text{Cov}(b_i, b_j) = 0$, converse false\\
+correlation: $\rho(b_i, b_j) \equiv \frac{\text{Cov}(b_i, b_j)}{(\text{Var}(b_i)\text{Var}(b_j))^{1 \backslash 2}}$
+$\text{Var}(\mathbf{b})$ positive semidefinite.
+cov and corr matrix positive definite most of the time.\\
+positive definite: $\mathbf{x^{\top}Ax} > 0$ for $\mathbf{x} \in k \times 1$.\\
+$\mathbf{x^{\top}Ax} = \sum_{i}^{k}\sum_{j}^{k} x_i x_j A_{ij}$.
+If $ \geq 0 \Rightarrow$ semidef.\\
+Any $\mathbf{B^{\top}B}$ is pos semidef.
+If full col rank then pos def.
+pos def $\Rightarrow$ diag $> 0$ \& non-singular.
+(pos def)$^{-1}$ $\exists$ \& is pos def.\\
+Precision mtrx: invers of cov mtrx of estmatr.
+$\exists$ \& pos def iff cov mtrx pos def.\\
+If $\mu$ IID w Var $\sigma^2$ and cov of any pair $=0$: $\text{Var}(\mathbf{u})=E(\mathbf{uu^{\top}}) = \sigma^{2}\mathbf{I}$.
+If false, $\mathbf{\Omega} = $ err cov mtrx.
+If diag of $\mathbf{\Omega}$ differ, heteroskedastic.
+Homoskedastic: all $\mu$ same Var.
+Autocorrelated: off-diag $\mathbf{\Omega} \neq 0$.\\
+$\hat{\beta}$ unbiased \& $\mathbf{\Omega}=\sigma^{2}\mathbf{I}$ so no hetero or autocorr, then $\text{Var}(\hat{\beta})=\sigma^2(\mathbf{X^{\top}X})^{-1}$.\\
+Precision affected by $n$, $\sigma^2$, $X$.\\
+Collinearity: precision for $\beta_1$ dep on $\mathbf{X_2}$.
+\subsection*{Efficiency}
+$\tilde{\beta}$ more efficient than $\hat{\beta}$ iff $\text{Var}(\tilde{\beta})^{-1} - \text{Var}(\hat{\beta})^{-1}$ is nonzero pos semidef mtrx.\\
+Gauss-Markov: If $E(\mathbf{u} \mid \mathbf{X}) = \mathbf{0}$ and $E(\mathbf{uu^{\top}} \mid \mathbf{X}) = \sigma^{2}\mathbf{I}$ then OLS $\hat{\beta}$ is BLUE ( best linear unbiased estimator ).
+Not necessary that $\mu$ normally distributed.
+\subsection*{Residuals \& Disturbances}
+$\mathbf{\hat{\mu}} = \mathbf{M_X u}$ (hat resid, $\mu$ dist).\\
+If $E(\mathbf{u}\mid \mathbf{X}) = \mathbf{0} \Rightarrow E(\lVert \mathbf{\hat{u}} \rVert ^2) \leq E(\lVert \mathbf{u} \rVert ^2)$\\
+$\text{Var}(\hat{u_t}) < \sigma^2$; $\hat{\sigma}^2 \equiv \frac{1}{n} \sum_{t}^{n} \hat{u}_t ^2$\\
+$E(\hat{\sigma}^2) = \frac{n-k}{n}\sigma^2$\\
+$E(\mathbf{u^{\top}M_X u}) = E(\text{SSR}(\hat{\beta})) = (n-k)\sigma^2$\\
+unbiased: $s^2 \equiv \frac{1}{n-k}\sum_{t}^{n} u_t ^2$; $s=$ std err.\\
+unbias est of $\text{Var}(\hat{\beta})$: $\widehat{\text{Var}}(\hat{\beta})=s^2(\mathbf{X^{\top}X})^{-1}$\\
+$s^2$ unbiased and consistent.\\
+$\text{MSE}(\tilde{\beta}) \equiv E((\tilde{\beta} - \beta_0)(\tilde{\beta} - \beta_0)^{\top})$\\
+I $\tilde{\beta}$ unbiased $\text{MSE}(\tilde{\beta}) = \text{Var}(\tilde{\beta})$.
+\subsection*{Measures of Goodness of Fit}
+$R_{u}^2 = \frac{\text{ESS}}{\text{TSS}}= \frac{\lVert \mathbf{P_X y \rVert^2}}{\lVert \mathbf{y} \rVert^2} = \cos^2 \theta$, where $\theta$ angle between $\mathbf{y}$ and $\mathbf{P_X y}$.
+$0 \leq R^2_{u} \leq 1$.\\
+$R_{c}^2$: center all vars first.
+Invalid if $\iota \notin \mathcal{S}(\mathbf{X})$.\\
+$R_{c}^2 = 1 - \sum_{t}^{n} \hat{u}_t ^2 \; \backslash \; \sum_{t}^{n} (y_t - \bar{y})^2$.\\
+Adj $R^2$: unbiased estimators.
+maybe $< 0$.\\
+$\bar{R}^2 \equiv 1- \frac{\frac{1}{n-k}\sum_{t}^{n} \hat{u_t}^2}{\frac{1}{n-1}\sum_{t}^{n}(y_t - \bar{y})^2} = 1 - \frac{(n-1)\mathbf{y^{\top}M_X y}}{(n-k)\mathbf{y^{\top}M_\iota y}}$\\
+$\bar{R}^2$ does not always $\uparrow$ in regressors.
+\subsection*{Hypothesis Testing}
+If $u_t$ normal, and $\sigma$ known, test $\beta=\beta_0$ w
+$z = \frac{\hat{\beta} - \beta_0}{(\text{Var}(\hat{\beta}))^{1 \backslash 2}} = \frac{n^{1 \backslash 2}}{\sigma}(\hat{\beta} - \beta_0)$, $z \sim N(0,1)$\\
+NCP: $\lambda = \frac{n^{1 \backslash 2}}{\sigma} (\beta_1 - \beta_0)$, $\beta_1 \neq \beta_0$\\
+Reject null if $z$ large enough.
+2-tail: $\lvert z \rvert$.\\
+Type 1: reject true null, 2: accept false\\
+left-tail $\Phi(-c_{\alpha}) = \alpha \backslash 2$, $c_\alpha = \Phi^{-1} (\alpha \backslash 2)$.\\
+$\Phi^{-1}(.975) = 1.96$.
+Power: prob test rejects the null.
+Prob of Type 2 $= 1 - P$(power).
+Power $\uparrow$ with $(\beta_1 - \beta_0) \uparrow$ or $\sigma \downarrow$ or $n \uparrow$.\\
+$p(z) = 2(1-\Phi(\lvert z \rvert))$\\
+$x \sim N(\mu, \sigma^2) \Rightarrow z = (x-\mu) \backslash \sigma$, $z \sim N(0,1)$.\\
+Lin comb of rand vars that are jointly multivariate normal must be $\sim N$.
+If $\mathbf{x}$ multivar norm with 0 cov, componenets of $\mathbf{x}$ are mutually indep.\\
+$\chi^2$: $y \equiv \lVert \mathbf{z} \rVert^2 = \mathbf{z^{\top}z} = \sum_{i}^{m} z_i ^2$., $y \sim \chi^2(m)$
+with $\mathbf{z} \sim N(\mathbf{0,I})$; $E(y) = m$.
+$\text{Var}(y) = 2m$.\\
+$y_1 \sim \chi^2(m_1)$ \& $y_2 \sim \chi^2(m_2)$ indep $\Rightarrow y_1 + y_2 \sim \chi^2 (m_1 + m_2)$\\
+$m\times1$ $\mathbf{x} \sim N(\mathbf{0,\Omega})$, then $\mathbf{x^{\top}\Omega^{-1}x} \sim \chi^2(m)$\\
+If $\mathbf{P}$ $n \times n$ w rank $r < n$ and $\mathbf{z} \sim N(\mathbf{0,I})$ then $\mathbf{z^{\top}Pz} \sim \chi^2(r)$.\\
+$z \sim N(0,1)$ \& $y \sim \chi^2(m)$, $z,y$ indep, then $t \equiv z \setminus (y \setminus m)^{1 \setminus 2}$.
+Or $t \sim t(m)$.
+Only first $m-1$ moments exist.
+Cauchy: $t(1)$.
+$\text{Var}(t) = m \setminus (m-2)$.
+$t(m)$ tends to std norm.\\
+$y_1$, $y_2$ indep rand var $\sim \chi^2 (m_1)$ \& $\chi^2(m_2)$, then $F \equiv \frac{y_1 \setminus m_1}{y_2 \setminus m_2}$.
+$F \sim F(m_1, m_2)$.
+As $m_2 \rightarrow \infty$, $F \sim 1 \setminus m_1$ times $\chi^2 (m_1)$.
+$t \sim t(m_2) \Rightarrow t^2 \sim F(1,m_2)$.
