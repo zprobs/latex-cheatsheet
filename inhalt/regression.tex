@@ -169,4 +169,36 @@ $f(a+h) = f(a) + hf^{\prime}(a+\lambda h)$, $h=b-a$, $0<\lambda <1$.
 $\hat{p}^{\ast}(\hat{\tau}) = \frac{1}{B} \sum_{b}^{B} \mathbb{I}(\tau_{b}^{\ast} > \hat{\tau})$\\
 $\hat{p}^{\ast}_{et}(\hat{\tau}) = 2 \min \left( \frac{1}{B} \sum_{b}^{B} \mathbb{I} (\tau_{b}^{\ast} \leq \hat{\tau}), \frac{1}{B} \sum_{b}^{B} \mathbb{I} (\tau_{b}^{\ast} > \hat{\tau}) \right)$ when biased param est and 2-tailed.
 $\hat{p}^{\ast}(\hat{\tau}) \rightarrow p(\hat{\tau})$ as $B \rightarrow \infty$. $\tau$ pivotal.
+\subsection*{Instrumental Variables}
+Can define $E(u_t \mid \Omega_t) = 0$.\\
+Err in variables: indep vars in regr model measured with err.
+$E(u_t \mid x_t) \neq 0$, $\text{Cov}(x_t. u_t) \neq 0$.
+OLS est biased and inconsist.
+Simultaneity: two or more endog vars jointly determined by sys of simultaneous eq.\\
+Assume, $E(\mathbf{uu^{\top}}) = \sigma^2 \mathbf{I}$ and at least one in $\mathbf{X}$ not predetermined wrt disturb.
+$n \times k$ mtrx $\mathbf{W}$ with $\mathbf{W_t \in \Omega_t}$.
+Col of $\mathbf{W}$ are IV.\\
+$E(u_t \mid \mathbf{W}_t) = 0$, $\mathbf{W}^{\top}(\mathbf{y - X\beta}) = \mathbf{0}$ are unbiased est eq.
+$\hat{\beta}_{IV} \equiv (\mathbf{W^{\top}X})^{-1}\mathbf{W}^{\top}\mathbf{y}$.
+$\mathbf{W^{\top}X}$ must be non-sing.
+$\hat{\beta}_{IV}$ generally biased but consistent.
+Assume $\mathbf{S_{W^{\top}X}} \equiv \text{plim} \frac{1}{n}\mathbf{W^{\top} X}$ is deterministic and non-sing.
+Same for $\mathbf{S_{W^{\top}W}}$.
+$\hat{\beta_{IV}}$ consistent iff $\text{plim} \frac{1}{n} \mathbf{W^{^\top}u} = 0$.
+Asym cov mtrx of IV est: $\sigma_{0}^{2} \text{plim}(n^{-1}\mathbf{X^{\top}P_W X})^{-1}$.
+$\mathbf{J}$: full col rank, asym deterministic, min asym cov mtrx of IV est.\\
+GIVE: $\hat{\beta}_{IV} = (\mathbf{X^{\top}P_W X})^{-1} \mathbf{X^{\top} P_W y}$
+IV est: Col of $P_W X$ should be lin indep.\\
+IV asym normal like all est.\\
+$\widehat{\text{Var}}(\hat{\beta}_{IV}) = \hat{\sigma}^2 (\mathbf{X^{\top}P_W X})^{-1}$.\\
+$\hat{\sigma}^2 = \lVert \mathbf{y - X \hat{\beta_{IV}}} \rVert ^{2} / n$.
+\subsection*{Generalized Least Squares}
+Consider $E(\mathbf{uu^{\top}}) = \mathbf{\Omega}$, $\mathbf{\Omega}^{-1} = \mathbf{\Psi \Psi^{\top}}$\\
+$\hat{\beta}_{GLS} = (\mathbf{X^{\top} \Omega^{-1} X})^{-1} \mathbf{X^{\top} \Omega^{-1} y}$\\
+$E(\mathbf{\Psi^{\top} uu^{\top} \Psi}) = \mathbf{I}$.\\
+$\text{Var}(\hat{\mathbf{\beta}}^{\top}_{GLS}) = (\mathbf{X^{\top} \Omega^{-1}X})^{-1}$
+autocovariance of AR(1): $\mathbf{\Omega}(p) = \frac{\sigma_{\epsilon}^2}{1-\rho^2} \times$ mtrx with 1 diag and $\rho^i$ increasing away from diag.
+$\text{Cov}(u_t, u_{t-1}) = \rho \sigma_u ^2$.\\
+$\sigma_u ^2 = \equiv \sigma_{\epsilon}^2 / (1-\rho^2)$\\
+$u_t = \rho u_{t-1} + \epsilon_t$, $\epsilon_t \sim IID(0, \sigma_{\epsilon}^2)$
 
