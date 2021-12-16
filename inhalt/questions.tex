@@ -1,0 +1,44 @@
+\section{Questions}
+\Q $X \sim N(0,1)$, $Z \equiv \mu + \sigma X$ mean and var? \A Mean: $\mu$, Var: $\sigma^2$.
+\Q If $X_1$, $X_2$ indep, show $E(X_1 \mid X_2) = 0$.
+\A $f(x_1 | x_2) = f(x_1,x_2)f(x_2) = f(x_1)f(x_2) f(x_2) = f(x_1)$.
+\Q Prove $\mathbf{P_X M_X = 0}$.
+\A $\mathbf{P_X + M_X = I \Rightarrow P_X + P_X M_X = P_X \Rightarrow P_X M_X = 0}$
+\Q $\mathcal{S}(W) \neq \mathcal{S}(X)$, show $P \equiv \mathbf{X(W^{\top}X)^{-1}W^{\top}}$ idempotent but not sym.
+\A idem easy.
+Find $P^\top$.
+$P$ projects onto $S(X)$.
+$Py = Xb$.
+Image of $P$ is all $S(X)$ but image of $P^{\top}$ is $S(W)$.
+$I - P$ projects to $S^{\perp}(W)$.
+$ P_W(I-P) = 0$.
+\Q $y = \beta_1 \iota + X_2 beta_2 + u$ show using FWL that $\beta_i$ can be written as \hdots with $M_{\iota}$.
+\A OLS resid orthog to regressors $\Rightarrow X_2 ^{\top} (M_{\iota} y - M_{\iota} X_2 \beta_2 ) = 0$.
+OLS of $\beta_1$ must be resid have mean 0, $\iota^{\top} (y-\beta_1 \iota - X_2 \beta_2 ) = 0$.
+\Q Show that $P_X - P_1 = P_{M_1 X_2}$.
+\A vector $\gamma \in s(M_1, X_2)$ is $M_1 X_2 \gamma$.
+Pre-multiply by $P_x - P_1$ and get $M_1 X_2 \gamma$.
+So invariant under projection.
+Now consider $z$ orthog to $S(M_1, X_2)$, $X_2 ^{\top} M_1 z = 0$.
+Show $P_x z = P_1 z$.
+\Q What about $M_{\iota}X$ and $P_{\iota} X$ when $n \times 3$?
+\A First col of $M_{\iota} X$ is 0.
+Other two are centered $X$.
+Each col of $P_{\iota} X$ has n copies of mean from col in $X$.
+First col is $\iota$, 2nd: $\bar{x_2}\iota$.
+Know $P_{\iota} P_X = P_{\iota}$ show that $M_{\iota} M_X = M_X$.
+Finally show $P_{\iota}M_{X} = 0$.
+\Q Show that leverage $h_t$ is square of cos of angle bt $e_t$ and its proj.
+\A proj: $P_X e_t$.
+$\cos^2 \theta$: $e_t ^{\top} P_X e_t$.
+\Q What is Tr($P_X$)?
+\A Tr($P_X$) $= k$ if full rank or $r$ if less.
+Tr($M_X$) $= n - r$.
+\Q Show $(\text{Cov}(b_1,b_2))^2 \leq \text{Var}(b_1) \text{Var}(b_2)$.
+\A determinant of pos semi def matrix is nonnegative.
+Find det of $\text{Var}(b) = Var(b_1)Var(b_2) - (Cov(b_1,b_2))^2$.
+\Q If $A$ pos def matrix, show that $A^{-1}$ is pos def.
+\A non-zero $x$: $x^{\top} A^{-1} x = (A^{-1}x)^{\top} A (A^{-1} x)$.
+quad form must be pos, and so is this.
+
+

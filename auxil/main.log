@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.9.1)  16 DEC 2021 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.9.1)  16 DEC 2021 12:58
 entering extended mode
 **./main.tex
 (main.tex
@@ -1763,7 +1763,77 @@ Overfull \vbox (2.12311pt too high) has occurred while \output is active []
 
 
 {/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/data/pdftex/config
-/pdftex.map}])
+/pdftex.map}]) (inhalt/questions.tex
+
+inhalt/questions.tex:2: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \Q
+       $X \sim N(0,1)$, $Z \equiv \mu + \sigma X$ mean and var? \A Mean: $\m...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+inhalt/questions.tex:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 ...WL that $\beta_i$ can be written as \hdots
+                                                   with $M_{\iota}$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+inhalt/questions.tex:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 ...\beta_i$ can be written as \hdots with $M_
+                                                  {\iota}$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :If $[]\OML/jkp/m/it/9 X[]$[]\T1/jkp/m
+/n/9 (+20) , $[]\OML/jkp/m/it/9 X[]$[] \T1/jkp/m/n/9 (+20) indep, show $[]\OML/
+jkp/m/it/9 E\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 X[] \OMS/jkp/m/n/9 j
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :Prove $[][]$[].
+ []
+
+
+Overfull \hbox (30.1334pt too wide) in paragraph at lines 2--43
+\T1/jkp/b/n/9 (-20) A\T1/jkp/m/n/9 (-20) :$[][]$[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
+\T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :OLS resid orthog to regressors
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
+[]\OMS/jkp/m/n/9 ) \OML/jkp/m/it/9 X[]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 M[]
+y \OMS/jkp/m/n/9   \OML/jkp/m/it/9 M[]X[][]\OT1/jkp/m/n/9 (+20) ) = 0$[]\T1/jk
+p/m/n/9 (+20) . OLS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
+\T1/jkp/m/n/9 (+20) under projection. Now consider $[]\OML/jkp/m/it/9 z$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
+\T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :determinant of pos semi def
+ []
+
+)
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 40.
 
@@ -1772,11 +1842,11 @@ Overfull \vbox (2.12311pt too high) has occurred while \output is active []
 
 [2] (/Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out/main.aux) ) 
 Here is how much of TeX's memory you used:
- 24596 strings out of 480862
- 506338 string characters out of 2901731
- 936814 words of memory out of 3000000
- 41501 multiletter control sequences out of 15000+600000
- 491237 words of font info for 188 fonts, out of 8000000 for 9000
+ 24656 strings out of 480862
+ 507024 string characters out of 2901731
+ 936832 words of memory out of 3000000
+ 41505 multiletter control sequences out of 15000+600000
+ 501616 words of font info for 228 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  102i,13n,108p,1003b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
 {
@@ -1802,9 +1872,9 @@ pfb></Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/fonts/
 type1/public/kpfonts/jkpsyc.pfb></Users/zachprobst/Library/Application Support/
 MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on /Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out
-/main.pdf (2 pages, 236581 bytes).
+/main.pdf (2 pages, 242492 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 57357 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 59405 words of extra memory for PDF output out of 61914 (max. 10000000)
 
