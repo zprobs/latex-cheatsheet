@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.9.1)  14 DEC 2021 21:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.9.1)  15 DEC 2021 23:46
 entering extended mode
 **./main.tex
 (main.tex
@@ -1439,81 +1439,105 @@ LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 77.
 LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
 LaTeX Font Info:    Redeclaring math symbol \lozenge on input line 142.
 )
+(/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+mathtools/mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+
+(/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count329
+\l_MT_multwidth_dim=\dimen285
+\origjot=\skip125
+\l_MT_shortvdotswithinadjustabove_dim=\dimen286
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen287
+\l_MT_above_intertext_sep=\dimen288
+\l_MT_below_intertext_sep=\dimen289
+\l_MT_above_shortintertext_sep=\dimen290
+\l_MT_below_shortintertext_sep=\dimen291
+\xmathstrut@box=\box139
+\xmathstrut@dim=\dimen292
+)
 \@input{inhalt/def.aux}
 \openout2 = `inhalt/def.aux'.
 
 (inhalt/def.tex
-\pgf@layerbox@background=\box139
-\pgf@layerboxsaved@background=\box140
+\pgf@layerbox@background=\box140
+\pgf@layerboxsaved@background=\box141
 )
 (/Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 25.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 26.
 LaTeX Font Info:    Trying to load font information for OML+jkp on input line 2
-5.
+6.
 
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 26.
 LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 2
-5.
+6.
 
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 kpfonts/omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 26.
 LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 2
-5.
+6.
 
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 26.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-25.
+26.
 
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 26.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 2
-5.
+6.
 
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
 
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/contex
 t/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
-\scratchdimen=\dimen285
-\scratchbox=\box141
-\nofMPsegments=\count330
-\nofMParguments=\count331
+\scratchcounter=\count330
+\scratchdimen=\dimen293
+\scratchbox=\box142
+\nofMPsegments=\count331
+\nofMParguments=\count332
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count332
-\MPscratchDim=\dimen286
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
+\MPscratchCnt=\count333
+\MPscratchDim=\dimen294
+\MPnumerator=\count334
+\makeMPintoPDFobject=\count335
 \everyMPtoPDFconversion=\toks44
 )
 (/Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
@@ -1560,18 +1584,18 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 25.
-Package microtype Info: Applying patch `item' on input line 25.
-Package microtype Info: Applying patch `toc' on input line 25.
-Package microtype Info: Applying patch `eqnum' on input line 25.
-Package microtype Info: Applying patch `footnote' on input line 25.
+LaTeX Info: Redefining \microtypecontext on input line 26.
+Package microtype Info: Applying patch `item' on input line 26.
+Package microtype Info: Applying patch `toc' on input line 26.
+Package microtype Info: Applying patch `eqnum' on input line 26.
+Package microtype Info: Applying patch `footnote' on input line 26.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 25.
+LaTeX Info: Redefining \showhyphens on input line 26.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1674,13 +1698,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--1
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--129
+\T1/jkp/m/n/9 (+20) is F-stat $[]\OMS/jkp/m/n/9  \OML/jkp/m/it/9 F\OT1/jkp/m/n
+/9 (+20) (\OML/jkp/m/it/9 r; n \OMS/jkp/m/n/9   \OML/jkp/m/it/9 k\OT1/jkp/m/n/9
+ (+20) )$[]\T1/jkp/m/n/9 (+20) , used for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--129
+\T1/jkp/m/n/9 (+20) multiple hyp on $[][]$[]. Under null,
+ []
+
+
+Underfull \hbox (badness 6859) in paragraph at lines 130--140
+[]\T1/jkp/m/n/9 (+20) EDF: $[][]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 x\OT1/jkp
+/m/n/9 (+20) ) \OMS/jkp/m/n/9  [] [][] \U/msb/m/n/9 I\OT1/jkp/m/n/9 (+20) (\OM
+L/jkp/m/it/9 x[] \OMS/jkp/m/n/9  \OML/jkp/m/it/9 x\OT1/jkp/m/n/9 (+20) )$[]\T1
+/jkp/m/n/9 (+20) . FTS:
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 130--140
+\T1/jkp/m/n/9 (+20) asymptotically $[]\OMS/jkp/m/n/9  \OML/jkp/m/it/9 N\OT1/jk
+p/m/n/9 (+20) (0\OML/jkp/m/it/9 ; \OT1/jkp/m/n/9 (+20) 1)$[] \T1/jkp/m/n/9 (+20
+) if $[]\OML/jkp/m/it/9 x[]$[] \T1/jkp/m/n/9 (+20) IID.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--140
+\T1/jkp/m/n/9 (+20) If $[]\OML/jkp/m/it/9 u$[] \T1/jkp/m/n/9 (+20) IID and test
+ing $[]\OML/jkp/m/it/9 [] \OT1/jkp/m/n/9 (+20) = \OML/jkp/m/it/9 []$[]\T1/jkp
+/m/n/9 (+20) ,
+ []
+
+
+Overfull \hbox (15.78748pt too wide) in paragraph at lines 169--172
+[][]\OT1/jkp/m/n/9 (-20) ([]) = 2 [] []$[]
+ []
+
 )
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 38.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 39.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 38.
+(Font)              scaled to size 8.0pt on input line 39.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 38.
+ mdframed uses option nobreak mdframed on input line 39.
 
 Overfull \vbox (2.12311pt too high) has occurred while \output is active []
 
@@ -1694,11 +1762,11 @@ Overfull \vbox (2.12311pt too high) has occurred while \output is active []
 /pdftex.map}]
 (/Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out/main.aux) ) 
 Here is how much of TeX's memory you used:
- 24040 strings out of 480862
- 496021 string characters out of 2901731
- 875253 words of memory out of 3000000
- 40968 multiletter control sequences out of 15000+600000
- 490027 words of font info for 179 fonts, out of 8000000 for 9000
+ 24531 strings out of 480862
+ 505258 string characters out of 2901731
+ 926523 words of memory out of 3000000
+ 41440 multiletter control sequences out of 15000+600000
+ 491237 words of font info for 188 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  102i,13n,108p,1003b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Use
@@ -1724,7 +1792,7 @@ Application Support/MiKTeX/texmfs/install/fonts/type1/public/kpfonts/jkpsy.pfb>
 1/public/kpfonts/jkpsyc.pfb></Users/zachprobst/Library/Application Support/MiKT
 eX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on /Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out
-/main.pdf (1 page, 217498 bytes).
+/main.pdf (1 page, 230767 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

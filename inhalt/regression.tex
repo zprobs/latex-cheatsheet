@@ -51,10 +51,10 @@ pos def $\Rightarrow$ diag $> 0$ \& non-singular.
 (pos def)$^{-1}$ $\exists$ \& is pos def.\\
 Precision mtrx: invers of cov mtrx of estmatr.
 $\exists$ \& pos def iff cov mtrx pos def.\\
-If $\mu$ IID w Var $\sigma^2$ and cov of any pair $=0$: $\text{Var}(\mathbf{u})=E(\mathbf{uu^{\top}}) = \sigma^{2}\mathbf{I}$.
+If $u$ IID w Var $\sigma^2$ and cov of any pair $=0$: $\text{Var}(\mathbf{u})=E(\mathbf{uu^{\top}}) = \sigma^{2}\mathbf{I}$.
 If false, $\mathbf{\Omega} = $ err cov mtrx.
 If diag of $\mathbf{\Omega}$ differ, heteroskedastic.
-Homoskedastic: all $\mu$ same Var.
+Homoskedastic: all $u$ same Var.
 Autocorrelated: off-diag $\mathbf{\Omega} \neq 0$.\\
 $\hat{\beta}$ unbiased \& $\mathbf{\Omega}=\sigma^{2}\mathbf{I}$ so no hetero or autocorr, then $\text{Var}(\hat{\beta})=\sigma^2(\mathbf{X^{\top}X})^{-1}$.\\
 Precision affected by $n$, $\sigma^2$, $X$.\\
@@ -62,9 +62,9 @@ Collinearity: precision for $\beta_1$ dep on $\mathbf{X_2}$.
 \subsection*{Efficiency}
 $\tilde{\beta}$ more efficient than $\hat{\beta}$ iff $\text{Var}(\tilde{\beta})^{-1} - \text{Var}(\hat{\beta})^{-1}$ is nonzero pos semidef mtrx.\\
 Gauss-Markov: If $E(\mathbf{u} \mid \mathbf{X}) = \mathbf{0}$ and $E(\mathbf{uu^{\top}} \mid \mathbf{X}) = \sigma^{2}\mathbf{I}$ then OLS $\hat{\beta}$ is BLUE ( best linear unbiased estimator ).
-Not necessary that $\mu$ normally distributed.
+Not necessary that $u$ normally distributed.
 \subsection*{Residuals \& Disturbances}
-$\mathbf{\hat{\mu}} = \mathbf{M_X u}$ (hat resid, $\mu$ dist).\\
+$\mathbf{\hat{u}} = \mathbf{M_X u}$ (hat resid, $u$ dist).\\
 If $E(\mathbf{u}\mid \mathbf{X}) = \mathbf{0} \Rightarrow E(\lVert \mathbf{\hat{u}} \rVert ^2) \leq E(\lVert \mathbf{u} \rVert ^2)$\\
 $\text{Var}(\hat{u_t}) < \sigma^2$; $\hat{\sigma}^2 \equiv \frac{1}{n} \sum_{t}^{n} \hat{u}_t ^2$\\
 $E(\hat{\sigma}^2) = \frac{n-k}{n}\sigma^2$\\
@@ -115,4 +115,58 @@ $t(m)$ tends to std norm.\\
 $y_1$, $y_2$ indep rand var $\sim \chi^2 (m_1)$ \& $\chi^2(m_2)$, then $F \equiv \frac{y_1 \setminus m_1}{y_2 \setminus m_2}$.
 $F \sim F(m_1, m_2)$.
 As $m_2 \rightarrow \infty$, $F \sim 1 \setminus m_1$ times $\chi^2 (m_1)$.
-$t \sim t(m_2) \Rightarrow t^2 \sim F(1,m_2)$.
+$t \sim t(m_2) \Rightarrow t^2 \sim F(1,m_2)$.\\
+\subsection*{Exact Tests ($\mathbf{u} \sim N(\mathbf{0}, \sigma^2 \mathbf{I})$)}
+$\frac{\mathbf{x_2^{\top} M_1 y}}{s(\mathbf{x_2 ^{\top} M_1 x_2})^{1 / 2}} = \left( \frac{\mathbf{y^{\top}M_X y }}{n-k} \right)^{-\frac{1}{2}} \frac{\mathbf{x_2^{\top} M_1 y}}{(\mathbf{x_2 ^{\top} M_1 x_2})^{1 \backslash 2}}$\\
+is t-stat $t_{\beta_2} \sim t(n-k)$ for testing $\beta_2 = 0$.\\
+$\beta_2 \in \mathbb{R} \Rightarrow$ test for $\beta_2 = \beta_{20}$: $(\hat{\beta_2} - \beta_{20}) / s_2$.
+$F_{\beta_2} \equiv \frac{(\text{RSSR - USSR}) / r}{\text{USSR} / (n-k) } = \frac{\mathbf{y^{\top}P_{M_1 X_2} y}/r}{\mathbf{y^{\top}M_X y}/(n-k)}$ is F-stat $\sim F(r,n-k)$, used for multiple hyp on $\mathbf{\beta_2}$.
+Under null, $\mathbf{M_1 y = M_1 u} \Rightarrow F_{\beta_2} = \frac{\mathbf{\epsilon^{\top}P_{M_1 X_2} \epsilon /}r }{\mathbf{\epsilon^{\top}M_X \epsilon}/(n-k)}$, where $\mathbf{\epsilon \equiv u} / \sigma$, $\mathbf{P_{M_1 X_2} = P_x - P_1}$.
+P-value for F is $1-F_{r,n-k}(F_{\beta_2})$.
+When only 1 restriction, F and 2-tailed t test are the same.
+If testing all $\beta = 0$, $F = \frac{n-k}{k-1} \times \frac{R_c ^2}{1-R_c ^2}$.
+If testing $\beta_1 = \beta_2$, let $\gamma = \beta_2 - \beta_1$ then $F_{\gamma} = \frac{(\text{RSSR} - \text{SSR}_1 - \text{SSR}_2) / k}{(\text{SSR}_1 + \text{SSR}_2) / (n-2k)}$
+\subsection*{Asymptotic Theory}
+EDF: $\hat{F}(x) \equiv \frac{1}{n}\sum_{t}^{n} \mathbb{I}(x_t \leq x)$.
+FTS: $\text{plim} \hat{F}(x) = F(x)$.
+CLT: $z_n \equiv \frac{1}{\sqrt{n}}\sum_{t}^{n} \frac{x_t - \mu}{\sigma}$ asymptotically $\sim N(0,1)$ if $x_t$ IID.
+Uncorrelated $x_t$ with $E(x_t) = 0 \Rightarrow n^{-1/2} \sum_{t}^{n} x_t$ goes to $N(0, \lim \frac{1}{n} \sum_{t}^{n} \text{Var}(x_t))$.
+If $\mathbf{u} \sim IID(\mathbf{0}, \sigma^2 \mathbf{I})$, $E(u_t \mid \mathbf{X}_t) = 0$, $E(u_t ^2 \mid \mathbf{X_t} = \sigma^2)$, $\text{plim}\frac{1}{n}\mathbf{X^{\top}X} = S_{X^{\top}X}$ where $S$ finite, deterministic, pos def mtrx, then $n^{1/2}(\mathbf{\hat{\beta} - \beta_0}) \xrightarrow{d} N(\mathbf{0}, \sigma^2 \mathbf{S}^{-1}_{\mathbf{X^{\top}X}})$ and $\text{plim}\;s^2 (n^{-1}\mathbf{X^{\top}X})^{-1} = \sigma^2 \mathbf{S}^{-1}_{\mathbf{X^{\top}X}}$.\\
+An estimator for cov mtrx is consistent if $\text{plim} (n \widehat{\text{Var}(\mathbf{\hat{\theta}})}) = \mathbf{V(\theta)}$, where $\mathbf{V(\theta)}$ is limiting cov mtrx of $n^{1/2}(\mathbf{\hat{\theta} - \theta_0})$\\
+If $u$ IID and testing $\beta_2 = \beta_2 ^0$, $t_{\beta_2} = \frac{\hat{\beta_2}-\beta_2^{0}}{\sqrt {s^2 (\mathbf{X^{\top}X})^{-1}_{22}}}$ and $t_{\beta_2} \stackrel{a}{\sim} N(0,1) \Rightarrow t_{\beta_2} = O_p (1)$.
+Under null $\mathbf{\beta_2} = \mathbf{0}$, w predetermined regressors $rF_{\beta_2} \stackrel{a}{\sim} \chi^2 (r) $ where $r = k_2$ is dim of $\mathbf{\beta_2}$.\\
+$W(\hat{\beta}) = (\mathbf{R}\hat{\beta} - r)^{\top}(\mathbf{R}\widehat{\text{Var}}(\hat{\beta})\mathbf{R}^{\top})^{-1}(\mathbf{R}\hat{\beta} - r)$ is Wald where cov mtrx consistent.
+$W(\hat{\beta}) \stackrel{a}{\sim} \chi^2 (r)$ under null where $r$ is r-vector.
+\subsection*{Multiple Testing}
+FWER: $\alpha_m = 1 - (1-\alpha)^m$.\\
+Bonferroni: $Pr(\cup_{i}^{m} P_i \leq \alpha / m) \leq \alpha$.\\
+Simes: $P_{(j)} \leq j \alpha / m$ for increasing $P$.
+Bonf more conservative than Simes.
+\subsection*{Power}
+If $\mathbf{z} \sim N(\mathbf{\mu, I})$ then $\mathbf{z^{\top}z} \sim$ non-central $\chi^2(m,\Lambda = \mathbf{\mu^{\top}\mu})$ If $\mathbf{z} \sim N(\mathbf{\mu, I})$ then $\mathbf{z^{\top}z} \sim$ non-central $\chi^2(m,\Lambda = \mathbf{\mu^{\top}\mu})$.
+Under null $\beta_2 = \mathbf{0} \Rightarrow \Lambda = 0$.\\
+$t(n-k,\lambda) \sim \frac{N(\lambda, 1)}{(\chi^2(n-k)/(n-k))^{1/2}}$, $\lambda^2 = \Lambda$.
+Pretest estimator: $\acute{\beta} = \mathbb{I}(F_{\gamma = 0} > c_\alpha)\hat{\beta} + \mathbb{I}(F_{\gamma=0} \leq c_\alpha)\tilde{\beta}$ where $c_{\alpha}$ is critical value for F test with $r$ and $n-k-r$ df at $\alpha$.
+$\acute{\beta} = \hat{\beta}$ when pretest rejects and $\acute{\beta} = \tilde{\beta}$ when reject.
+\subsection*{Confidence \& Sandwich Cov Matrices}
+$\theta_0 \in $ confidence set iff $\tau(\mathbf{y}, \theta_0) \leq c_{\alpha}$, if $\theta_0$ true then prob is $1-\alpha$.
+Asymp t-stat: $(\hat{\theta}-\theta)/s_{\theta}$.
+Pivot: same distribution $\forall \text{DGP}$.
+CI exact only if $\tau$ pivot.
+If no stat with known finite sample dist, use Wald with $k_2$ vector $\hat{\theta}_2$ asym normal: $(\hat{\theta}_2 - \theta_{20})^{\top}(\widehat{\text{Var}}(\hat{\theta}_2))^{-1}(\hat{\theta}_2 - \theta_{20}) \leq c_{\alpha}$.
+$\text{Var}(\hat{\beta}) = (\mathbf{X^{\top}X})^{-1} \mathbf{X}^{\top}\mathbf{\Omega}\mathbf{X(X^{\top}X)^{-1}}$\\
+$\hat{\mathbf{\Omega}}$: $\frac{1}{n} \sum_{t}^{n} \hat{u}_t ^2 x_{ti} x_{tj}$\\
+$\widehat{\text{Var}}(\hat{\beta}) = (\mathbf{X^{\top}X})^{-1} \mathbf{X}^{\top}\mathbf{\hat{\Omega}}\mathbf{X(X^{\top}X)^{-1}}$\\
+$HC_0$: Use $\hat{u}_t ^2$ in diag of $\mathbf{\hat{\Omega}}$ and 0 else.\\
+$HC_1$: Use $\hat{u}_t ^2$ in $\mathbf{\hat{\Omega}}$ then mult by $n / (n-k)$\\
+$HC_2$: $\hat{u}_t ^2 / (1-h_t)$ with $h_t \equiv \mathbf{X_t(X^{\top}X)^{-1}X_t ^{\top}}$.\\
+$HC_3$: $\hat{u}_t ^2 / (1-h_t)$ jackknife, for big varianc.\\
+Ignore hetero for std err of sample mean.
+HAC for when $u_t$ hetero and/or autocorr.
+$\mathbf{\hat{\Sigma}} = (1 / n) \mathbf{X^{\top}\hat{\Omega}X}$ (Newey-West/H. White)\\
+$f(a+h) = f(a) + hf^{\prime}(a+\lambda h)$, $h=b-a$, $0<\lambda <1$.
+\subsection*{Bootstrap}
+$\hat{p}^{\ast}(\hat{\tau}) = \frac{1}{B} \sum_{b}^{B} \mathbb{I}(\tau_{b}^{\ast} > \hat{\tau})$\\
+$\hat{p}^{\ast}_{et}(\hat{\tau}) = 2 \min \left( \frac{1}{B} \sum_{b}^{B} \mathbb{I} (\tau_{b}^{\ast} \leq \hat{\tau}), \frac{1}{B} \sum_{b}^{B} \mathbb{I} (\tau_{b}^{\ast} > \hat{\tau}) \right)$ when biased param est and 2-tailed.
+$\hat{p}^{\ast}(\hat{\tau}) \rightarrow p(\hat{\tau})$ as $B \rightarrow \infty$. $\tau$ pivotal.
+
