@@ -40,5 +40,194 @@ Find det of $\text{Var}(b) = Var(b_1)Var(b_2) - (Cov(b_1,b_2))^2$.
 \Q If $A$ pos def matrix, show that $A^{-1}$ is pos def.
 \A non-zero $x$: $x^{\top} A^{-1} x = (A^{-1}x)^{\top} A (A^{-1} x)$.
 quad form must be pos, and so is this.
+\Q If $A$ pos def sym the $I - A$ is pos def iff $A^{-1} -I$ is pos def.
+\A If $A = R^2$, $R^{-1}R^{-1} = A^{-1}$ and $R^{-1} A R^{-1} = I$.
+$x^{\top}(I-A)x = z^{top}(A^{-1} - I)z$ so left pos def iff right pos def.
+If $A - B$ pos def then so is $R^{-1} (A_B)R^{-1}$.
+Get $I - R^{-1}BR^{-1}$ pos def iff $RB^{-1} R - I$ pos def from part a).
+Pre and post mult by $R^{-1}$.
+\Q Prove $E(\hat{u}^{\top} \hat{u}) = (n-k)\sigma_0^2 $.
+\A $\hat{u}^{\top} \hat{u} = u^{\top} M_X u$ which is a scalar so equal to its own trace.
+$E(\hat{u}^{\top} \hat{u}) = E(Tr(u^{\top} M_X u)) = E(Tr(u^{\top}u M_X )) = \sigma^2_0 Tr(M_X)$
+\Q $y = X\beta + u$ and $y = X\beta + Z\gamma + u$ with $X^{\top}Z = 0$.
+Show $\beta$ identical.
+\A FWL to get estimates.
+Since $X^{\top}Z = 0 \Rightarrow P_Z X = 0$ and $M_Z X = X$ is all you need.
+\Q error $\sim IID(0, \sigma^2)$, cov of forecast errors?
+\A $y_{\ast} - X_{\ast} \hat{\beta} = u_{\ast} - X_{\ast} (X^{\top}X)^{-1} X^{\top} u$.
+Use def to get cov matrix.
+\Q Run regression with restriction that $\beta_2 + \beta_3 = 1$.
+\A sub $\beta_3 = 1 - \beta_2$ into regression.
+Define $y_t ^{\prime} = y_t - x_{t3}$ and $z_t = x_{t2} - x_{t3}$.
+\Q Suppose new regression with $y_t ^{\prime} = y_t + 10$
+\A constant goes 10 higher.
+$R_c ^2$ and $\bar{R} ^2$ unchanged becuase TSS around mean nor SSR change.
+But $R_u ^2$ changes because TSS around 0 greater.
+\Q If $z \sim N(0,1)$ and z test stat 2-tailed, $p(z) = 2(1 - \Phi (\lvert z \rvert))$.
+Show $F_{p}$, CDF of $p(z)$ is $F_p (x) = x$.
+For $x\ in [0,1]$.
+\A Pr($p(z) \leq x$) $= Pr (\lvert z \rvert \geq \Phi ^{-1} (1-x/2))$.
+Because $z \sim N(0,1)$ , $\Phi (-\Phi ^{-1} (1-x / 2)) + 1 - \Phi (\Phi^{-1} (1 - x / 2))$.
+Simplifies to $x$.
+Use symmetry of normal.
+\Q $y_t = \beta_1 + \beta_2 x_{t1} + \beta_3 x_{t2} + u_t $.
+Rerwite so $\beta_2 - \beta_3 = 1$ is zero restriction.
+\A Sub and rearrrange so LHS is $y_t + x_{t2}$ and add $\gamma x_{t2}$.
+Equiv because spans of regressors are same.
+Becomres restricted model when $\gamma = 0$.
+\Q model with $r$ restrictions $R\beta = r$.
+Rewrite so $r$ zero restrictions.
+\A $R_1 \beta_1 + R_2 \beta_2 = r$.
+Solve for $\beta_2$.
+Sub in.
+Subtract $X_2 R_2 ^{-1} r$ from $y$.
+$Z_1 \equiv X_1 - X_2 R_2 ^{-1} R_1$ spans same as $X$.
+$y - X_2 R_2 ^{-1} r = Z_1 \gamma_1 + X_2 \gamma _2 + u$ is equiv with $\beta_1 = \gamma_1$.
+$\gamma_2 = 0 \Rightarrow R\beta = r$.
+\Q When performing Chow test
+\A Since n2 < k, we cannot run the regression for the second subsample. If we
+did, we would get SSR2 = 0. Thus, in this special case, SSR1 +SSR2 = SSR1.
+Therefore, RSSR−SSR1 −SSR2 in () must be replaced by RSSR−SSR1,
+and SSR1 + SSR2 must be replaced by SSR1, as in the formula above.
+For the denominator,  easy to see that the df is
+n1 − k, since SSR1 is the SSR from a regression with n1 observations and k
+parameters. For the numerator, the degrees of freedom for RSSR is n − k,
+and the degrees of freedom for SSR1 is n1 − k. The difference between these
+is $n − k − (n1 − k) = n − n1 = n2$.
+\Q Show $r$ times F stat is $\chi^2(r)$ asym.
+\A denom of F dist as $\chi^2 (n-k)$ under normality.
+Has mean $(n-k)$ even without normality assmpt.
+LLN $\Rightarrow$ denom tends to 1 asym.
+Let $v = n^{-1/2}X^{\top} \epsilon$.
+CLT: $v \sim N(0, S_{X^{\top}X})$.
+\Q How is $y^{\top} M_{X} y / \sigma_{0}^2$ dist?
+Test $\sigma = \sigma_0$.
+\A When specified correct: $y^{\top} M_{X} y / \sigma_{0}^2 = \epsilon^{\top} M_X \epsilon$ which $\sim \chi^2 (n-k)$.
+Two-tailed.
+\Q stat $\tau$ with CDF $F$ where $F(-x) \neq 1-F(x)$.
+marginal sig level satisfies one of: $F(\hat{\tau}) = \alpha / 2$ or $1 - (\alpha / 2)$
+Isolate $\alpha$, consider $F(\tau) = 1/2$.
+\Q If $F$ strict increase on $[a,b]$, show if $X \sim U(0,1)$, then $F^{-1} (X)$ is drawing from dist of which F is CDF.
+\A Since $F$ increase: $Pr(F^{-1} (X) \leq x) = Pr(X \leq F(x))$ which is just $F(X)$ because uniform $X$.
+\Q $\text{Var} (\hat{u}_t) = (1-h_t)\sigma_0 ^2$.
+Derive alt to rescaling residuals.
+\A $\dot{u_t} = \hat{u} / (1-h_t)^{1/2}$.
+Each $\dot{u_t}$ has same variance $\sigma_0 ^2$, but not mean 0.
+Define $\mu_1 = \frac{1}{n} \sum \dot{u_t}$ and $\mu_2 = \frac{1}{n} \sum \dot{u_t}^2$.
+Answer: $\frac{\tilde{s}}{(\dot{\mu}_2 - \dot{\mu}_1 ^2)^{1/2}} (\dot{u} - \dot{\mu}_1)$
+\Q If $z \sim N(0,1)$ under null and $N(\lambda, 1)$ under alt, show power.
+\A Power is $Pr(z < -c_{\alpha}) + Pr(z > -c_{\alpha})$.
+$Pr(z < -c_{\alpha}) = \Phi (-c_{\alpha} - \lambda)$ and $Pr(z > -c_{\alpha}) = \Phi (-c_{\alpha} + \lambda)$
+\Q $z \sim N(\mu, I)$, exp of $z^{\top}z$ is $m + \mu^{\top}\mu$
+\A Write $z = \mu + x$ with $x \sim N(0,I)$.
+$E(z^{\top}z) = \mu^{\top} \mu + m$ because second term dist $chi^2$ with exp $m$.
+\Q Using square of t-stat obtain .99 CI for $\beta_2$.
+\A Use simple t. $Pr ( t < F_{.99} (1,n-k) ) = .99$.
+Take pos square root of both side.
+Write out both ineq so get rid of abs value.
+Sub $\hat{beta}_2$ and mult -1.
+\Q Explain how to construct symm bootstrap CI based on asym $t = (\hat{\theta} - \theta_0 / s_0)$.
+\A Let $t^{\ast}_j$ denote the jth bootstrap t statistic.
+Then, instead of sorting the $t^{\ast}_j$ themselves, we take their absolute values and sort the them from largest to smallest.
+If we do this, the level $\alpha$ critical value can be estimated as the entry numbered α(B + 1) in the sorted list.
+For example, if B = 999, it is entry number 50.
+Let us denote this estimate by $c^{\ast}_{\alpha}$.
+Then the symmetric bootstrap CI is $[\hat{\theta} - s_{\theta} c_{\alpha}^{\ast}, \hat{\theta} + s_{\theta} c^{\ast}_{\alpha}]$
+\Q Suppose SSR from OLS is 106.44.
+Under classic normal, construct .95 CI for $\sigma^2$.
+\A Under classic normal $y^{\top}M_X y / sigma^2 \sim \chi^2 (n-k)$.
+$n - k = 94$.
+Solve $106.44 = \text{0.025 quant of chi} \sigma^2$, (2 equations).
+\Q est $\theta$ by Least Squares.
+Gen 999 bootstrap and calc $t$ for $\theta = \hat{\theta}$.
+Find .95 studentized bootstrap CI.
+\A $[\hat{\theta} - s_{\theta} c^{\ast} _{.975}, \hat{\theta} - s_{\theta} c^{\ast} _{.025} ]$
+\Q Show that F stat that $\beta_2 = \beta_{20}$ can be written as
+\A The denominator of (5.26) is evidently the denominator of both F statistics,
+since it is just the usual OLS estimator $s^2$ for both of the unrestricted models,
+(5.24) and (5.25). It is not quite so obvious that the numerator of (5.26) is
+the numerator of the F statistic. The usual way to construct the numerator
+of an F statistic is to subtract the unrestricted SSR from the restricted SSR
+and divide by the number of restrictions. For the model (5.25), k2 times this
+numerator is
+\Q $x_1$, $x_2$ centered.
+$\hat{\rho}$ is sample corr.
+Show corr of $\hat{\beta}$ is $- \rho$.
+\A Use FWL to find $\text{Var}(\hat{\beta}_1) = \sigma^2 (x_1 ^{\top} M_2 x_1 )^{-1}$ and $\text{Var}(\hat{\beta}_2) = \sigma^2 (x_2 ^{\top} M_1 x_2 )^{-1}$.
+Rewrite $x_1 ^{\top}M_{2}x_1 = (1-\hat{\rho}^2)x_1 ^{\top} x_1 $.
+Use FWL to find Cov for $\beta_i$ too.
+Assmpt that error are normal can be relaxed but $E(uu^{\top}) = \sigma^2 I$ cannot.
+\Q Consider .05 conf region for $\beta_1$ and $\beta_2$.
+Show set is circular disk, what is radius.
+\A exact conf region is $(\hat{\beta} - \beta_0 )^{\top} X^{\top} X (\hat{\beta} - \beta_0) \leq 2 c_{.05} s^2$.
+Where $c_{.05}$ is critical value for $F(2, n-2)$.
+Radius: $(2 c_{.05} s^2)^{-1/2}$
+\Q First 3 rows of matrix, left side is $\iota$, right is $\in \mathbb{R}$.
+Repreated.
+\A Use FWL for estimate of $\beta_2$
+\Q Show that minimizing the criterion function with respect to $\beta$ yields generalized IV est.
+\A Criterion func is $Q(\beta, y) = (y - X\beta)^{\top} P_{W} (y-X \beta)$.
+Differentiate wrt $\beta$ and set to 0.
+\Q Show that plim of $\frac{1}{n}Q(\beta_0 , y)$ is zero.
+\A plim $\frac{1}{n} Q(\beta_0 , y) = $ plim $\frac{1}{n}u^{\top} P_W u$.
+Split $P_W$ up into three plims with $W$.
+Assumption when plim$n^{-1} W^{\top}u = 0$ and plim$n^{-1} W^{\top}W$ is nonsign matrix.
+Get $0 S^{-1}_{W^{\top}W} 0 = 0$.
+\Q assume asym ident condition $S_{X^\top W} (S_{W^{\top}W})^{-1} S_{W^{\top} X}$ has full rank.
+Show GIVE is consistent.
+\A Expand $\hat{\beta}_{IV}$ to $\beta_0$ + \hdots.
+Multiply by $n^{-1}$.
+plim $\hat{\beta}_{IV} = \beta_0 + \hdots$ which goes to 0 by assumption on $n^{-1}W^{\top} u$ so plim $\hat{\beta}_{IV} = \beta_0$.
+\Q Apply CLT to $n^{-1/2}W^{\top}u$ and get asym multivar normal with mean 0.
+Show $n^{1/2} (\beta_{IV} - \beta_0)$ is asym normal with mean 0.
+\A Use plim$n^{-1} W^{\top}X = S_{W^{\top}X}$.
+Show that plim$(n^{-1} X^{\top} P_W X)^{-1} = ((S_{X^{\top} W}) (S_{W^{\top}W})^{-1} S_{W^{\top} X})^{-1}$
+Second factor: plim$(n^{-1/2} X^{\top} P_W u) = S_{X^{\top} W }(S_{W^{\top} W})^{-1} $plim $(n^{-1/2}W^{\top} u)$.
+Under assmpt last term is asym normal with mean 0.
+So our thing is too.
+Asym cov matrix of $n^{-1/2}W^{\top} u$ is $\sigma_0 ^2 S_{W^{\top} W}$.
+\Q Suppose $W_1$ and $W_2$ matrices of instruments with $W_2$ extra col.
+Prove generalized IV $W_2$ more eff than $W_1$.
+\A $X^{\top} (P_{W_2} - P_{W1} )X $.
+Since $S(W_1) \subset S(W_2)$ $P_{W_1}P_{W_2} = P_{W1} = P_{W_2}P_{W_1}$.
+Rewrite.
+Since $I - P_{W_1}$ is orthog proj matrx, it is pos semi def.
+Divide by $n$ and tend to $\infty$.
+\Q Show that simple IV unbiased when data gen by $\sigma_v = 0$.
+\A $\hat{\beta_{IV}} = \beta_0 + \sigma_u (w^{\top} x)^{-1} w^{\top} u$.
+If $\sigma_u = 0$, then $x = w\pi_0$.
+Second term on right after subbing in is $\sigma_u / \pi_0$ times coeff est from OLS of $u$ on $w$.
+$w$ exog so $E((w^{\top}w)^{-1} w^{\top}u) = 0$.
+Conclude that $E(\hat{\beta}_{IV}) = \beta_0$.
+$x$ is scalar mult of $w$ so uncorr with $u$.
+OLS $\beta$ unbiased so IV unbiased.
+\Q Verify that $\hat{\beta_{IV}} = \hat{\beta}$ OLS when $X = [ZY] = W \Pi$.
+Is consistent?
+\A plug and chug.
+Yes consistent.
+plim of est is $\beta_0 + \text{plim}(\frac{1}{n}\Pi ^{\top} W^{\top} W \Pi )^{-1} \text{plim}(\frac{1}{n}\Pi ^{\top} W^{\top} u )$
+1st factor in 2nd term is full rank deterministic, second factor 0.
+Second term is 0.
+\Q Verify using assumpt that instrument in $W$ are exog and pred and LLN.
+\A Need to apply LLN to $n^{-1}W^{\top}V$.
+Prob limits of $n^{-1}$ times each term is 0.
+Apply CLT to second factor, asym $\sim N(0, \text{cov})$.
+\Q Prove $\frac{1}{\sigma^2} u^{\top} (P_{P_{W}X} - P_{P_W X_1})u \sim \chi^2 (k_2)$
+\A $P_{P_{W}X} - P_{P_W X_1}$ is diff btw two orthog proj matrices.
+So it is orthog proj.
+It is subspace of $S(W)$.
+Can be put as $Z(Z^{\top}Z)^{-1}Z^{\top}$ where $Z$ is $k_2$ dimensional so proj goes to $S(Z)$.
+Sub it in.
+All cols of $Z$ asym uncorr with $u$.
+CLT to $n^{-1/2} Z^{\top} u \sim a \sim N(0,\sigma_0 ^2 Z^{\top} Z)$.
+So we have a norm sandwich and must be $\sim \chi^2 (k_2)$.
+\Q $P$ proj and $z$ not norm.
+Show that $zPz$ follows $\chi^2 (r)$ asym
+\A Expand $P$ as $Z$.
+add $n^{-1/2}$ and $n$ as mult by 1.
+Apply CLT to both sides, get normal w mean 0 and cov matrix plim $\frac{1}{n}Z^{\top}Z$.
+
+
+
 
 

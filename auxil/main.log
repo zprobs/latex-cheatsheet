@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.9.1)  16 DEC 2021 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.9.1)  16 DEC 2021 17:37
 entering extended mode
 **./main.tex
 (main.tex
@@ -1795,42 +1795,356 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--43
+inhalt/questions.tex:90: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 Therefore, RSSR−
+                       SSR1 −SSR2 in () must be replaced by RSSR−SSR1,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:90: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 Therefore, RSSR−SSR1 −
+                               SSR2 in () must be replaced by RSSR−SSR1,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:90: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 ... −SSR2 in () must be replaced by RSSR−
+                                                  SSR1,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:93: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 n1 −
+            k, since SSR1 is the SSR from a regression with n1 observations ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:94: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 ..., the degrees of freedom for RSSR is n −
+                                                   k,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:95: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 and the degrees of freedom for SSR1 is n1 −
+                                                   k. The difference between...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:96: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 is $n −
+               k − (n1 − k) = n − n1 = n2$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:96: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 is $n − k −
+                     (n1 − k) = n − n1 = n2$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:96: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 is $n − k − (n1 −
+                             k) = n − n1 = n2$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:96: Package inputenc Error: Unicode character − (U+2212)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 is $n − k − (n1 − k) = n −
+                                        n1 = n2$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+inhalt/questions.tex:132: Package inputenc Error: Unicode character α (U+03B1)
+
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 ...can be estimated as the entry numbered α
+                                                  (B + 1) in the sorted list.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+inhalt/questions.tex:178: Missing $ inserted.
+<inserted text> 
+                $
+l.178 ... $\hat{\beta}_{IV}$ to $\beta_0$ + \hdots
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+inhalt/questions.tex:179: Missing $ inserted.
+<inserted text> 
+                $
+l.179 Multiply by $n^
+                     {-1}$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
 \T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :If $[]\OML/jkp/m/it/9 X[]$[]\T1/jkp/m
 /n/9 (+20) , $[]\OML/jkp/m/it/9 X[]$[] \T1/jkp/m/n/9 (+20) indep, show $[]\OML/
 jkp/m/it/9 E\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 X[] \OMS/jkp/m/n/9 j
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--43
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
 \T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :Prove $[][]$[].
  []
 
 
-Overfull \hbox (30.1334pt too wide) in paragraph at lines 2--43
+Overfull \hbox (30.1334pt too wide) in paragraph at lines 2--229
 \T1/jkp/b/n/9 (-20) A\T1/jkp/m/n/9 (-20) :$[][]$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--43
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
 \T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :OLS resid orthog to regressors
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--43
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
 []\OMS/jkp/m/n/9 ) \OML/jkp/m/it/9 X[]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 M[]
 y \OMS/jkp/m/n/9   \OML/jkp/m/it/9 M[]X[][]\OT1/jkp/m/n/9 (+20) ) = 0$[]\T1/jk
 p/m/n/9 (+20) . OLS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--43
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
 \T1/jkp/m/n/9 (+20) under projection. Now consider $[]\OML/jkp/m/it/9 z$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--43
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
 \T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :determinant of pos semi def
+ []
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 2--229
+[]\OML/jkp/m/it/9 R[]R[] \OT1/jkp/m/n/9 (+20) = \OML/jkp/m/it/9 A[]$[] \T1/jkp/
+m/n/9 (+20) and $[]\OML/jkp/m/it/9 R[]AR[] \OT1/jkp/m/n/9 (+20) = \OML/jkp/m/it
+/9 I$[]\T1/jkp/m/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :Suppose new regression with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) Rewrite so $[]\OML/jkp/m/it/9 r$[] \T1/jkp/m/n/9 (+20) zero
+ restrictions.
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :$[]\OML/jkp/m/it/9 R[][] \OT1/jkp/m/
+n/9 (+20) + \OML/jkp/m/it/9 R[][] \OT1/jkp/m/n/9 (+20) = \OML/jkp/m/it/9 r$[]\
+T1/jkp/m/n/9 (+20) . Solve for $[]\OML/jkp/m/it/9 []$[]\T1/jkp/m/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) Sub in. Subtract $[]\OML/jkp/m/it/9 X[]R[]r$[] \T1/jkp/m/n/
+9 (+20) from $[]\OML/jkp/m/it/9 y$[]\T1/jkp/m/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :How is $[]\OML/jkp/m/it/9 y[]M[]y=[]
+$[] \T1/jkp/m/n/9 (+20) dist? Test
+ []
+
+
+Underfull \hbox (badness 5161) in paragraph at lines 2--229
+[]\OML/jkp/m/it/9  \OT1/jkp/m/n/9 (+20) = \OML/jkp/m/it/9 []$[]\T1/jkp/m/n/9 
+(+20) . \T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :When specified correct:
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :Explain how to construct symm
+ []
+
+
+Underfull \hbox (badness 6775) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) bootstrap CI based on asym $[]\OML/jkp/m/it/9 t \OT1/jkp/m/
+n/9 (+20) =
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) bootstrap and calc $[]\OML/jkp/m/it/9 t$[] \T1/jkp/m/n/9 (+
+20) for $[]\OML/jkp/m/it/9  \OT1/jkp/m/n/9 (+20) = []$[]\T1/jkp/m/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) Find .95 studentized bootstrap CI.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+[][]\OT1/jkp/m/n/9 (+20) ([]) = \OML/jkp/m/it/9 []\OT1/jkp/m/n/9 (+20) (\OML/j
+kp/m/it/9 x[]M[]x[]\OT1/jkp/m/n/9 (+20) )[]$[]\T1/jkp/m/n/9 (+20) . Rewrite
+ []
+
+
+Underfull \hbox (badness 7649) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) function with respect to $[]\OML/jkp/m/it/9 $[] \T1/jkp/m/
+n/9 (+20) yields
+ []
+
+
+Underfull \hbox (badness 7522) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) is $[]\OML/jkp/m/it/9 Q\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/
+9 ; y\OT1/jkp/m/n/9 (+20) ) = (\OML/jkp/m/it/9 y \OMS/jkp/m/n/9   \OML/jkp/m/i
+t/9 X\OT1/jkp/m/n/9 (+20) )[]\OML/jkp/m/it/9 P[]\OT1/jkp/m/n/9 (+20) (\OML/jkp
+/m/it/9 y \OMS/jkp/m/n/9   \OML/jkp/m/it/9 X\OT1/jkp/m/n/9 (+20) )$[]\T1/jkp/m
+/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 6526) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) A\T1/jkp/m/n/9 (+20) :plim $[][]\OML/jkp/m/it/9 Q\OT1/jkp/m
+/n/9 (+20) (\OML/jkp/m/it/9 []; y\OT1/jkp/m/n/9 (+20) ) =$[] \T1/jkp/m/n/9 (+2
+0) plim $[][]\OML/jkp/m/it/9 u[]P[]u$[]\T1/jkp/m/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :assume asym ident condition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) assumption on $[]\OML/jkp/m/it/9 n[]W[]u$[] \T1/jkp/m/n/9 (
++20) so plim
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) Show that plim$[]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 n[]X
+[]P[]X\OT1/jkp/m/n/9 (+20) )[] =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\OT1/jkp/m/n/9 (+20) ((\OML/jkp/m/it/9 S[]\OT1/jkp/m/n/9 (+20) )(\OML/jkp/m/it/
+9 S[]\OT1/jkp/m/n/9 (+20) )[]\OML/jkp/m/it/9 S[]\OT1/jkp/m/n/9 (+20) )[]$[] \T1
+/jkp/m/n/9 (+20) Second
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/m/n/9 (+20) factor: plim$[]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 n[]X[]
+P[]u\OT1/jkp/m/n/9 (+20) ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\OML/jkp/m/it/9 S[]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 S[]\OT1/jkp/m/n/9 (+20
+) )[]$[]\T1/jkp/m/n/9 (+20) plim $[]\OT1/jkp/m/n/9 (+20) (\OML/jkp/m/it/9 n[]W[
+]u\OT1/jkp/m/n/9 (+20) )$[]\T1/jkp/m/n/9 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+\T1/jkp/b/n/9 (+20) Q\T1/jkp/m/n/9 (+20) :Show that simple IV unbiased
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--229
+[]\OT1/jkp/m/n/9 (+20) ([]\U/jkpmia/m/it/9 []\OML/jkp/m/it/9 W[]W\U/jkpmia/m/i
+t/9 \OT1/jkp/m/n/9 (+20) )[][]([]\U/jkpmia/m/it/9 []\OML/jkp/m/it/9 W[]u\OT1/
+jkp/m/n/9 (+20) )$[]
  []
 
 )
@@ -1842,11 +2156,11 @@ Overfull \vbox (2.12311pt too high) has occurred while \output is active []
 
 [2] (/Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out/main.aux) ) 
 Here is how much of TeX's memory you used:
- 24656 strings out of 480862
- 507024 string characters out of 2901731
+ 24698 strings out of 480862
+ 507417 string characters out of 2901731
  936832 words of memory out of 3000000
- 41505 multiletter control sequences out of 15000+600000
- 501616 words of font info for 228 fonts, out of 8000000 for 9000
+ 41507 multiletter control sequences out of 15000+600000
+ 505728 words of font info for 258 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  102i,13n,108p,1003b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
 {
@@ -1872,7 +2186,7 @@ pfb></Users/zachprobst/Library/Application Support/MiKTeX/texmfs/install/fonts/
 type1/public/kpfonts/jkpsyc.pfb></Users/zachprobst/Library/Application Support/
 MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on /Users/zachprobst/Desktop/school/econ468/latex-cheatsheet/out
-/main.pdf (2 pages, 242492 bytes).
+/main.pdf (2 pages, 262617 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
